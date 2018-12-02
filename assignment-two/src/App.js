@@ -2,8 +2,27 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+     state = {
+         StrLength: {id : 'adfasdf', len: 0}
+     }
+
+
+    changedStringHandler = (event, id) => {
+       console.log('Changed - ' + id);
+
+       const tmpStrLen = this.state.StrLength;
+        tmpStrLen.len++;
+
+
+       this.setState({StrLength: tmpStrLen});
+
+    }
+
+
     render() {
-        return (
+
+       return (
             <div className="App">
                 <ol>
                     <li>Create an input field (in App component) with a change listener which outputs the length of the entered text below it (e.g. in a paragraph).</li>
@@ -14,6 +33,10 @@ class App extends Component {
                     <li>When you click a CharComponent, it should be removed from the entered text.</li>
                 </ol>
                 <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
+                <div>
+                    <p>Name : <input type="text" onChange={this.changedStringHandler} /></p>
+                    <p>Length of Input Field: {this.state.StrLength.len}</p>
+                </div>
             </div>
         );
     }
