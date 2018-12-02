@@ -1,0 +1,77 @@
+setup notes:
+- page needs react and react DOM (use min)
+- use Bebel as preprocessor (assures cross browser compatability)
+
+Notes General
+- react uses jsx syntax (get reference)
+- Course Outline
+    - Getting Started
+    - Basics
+    - Debugging
+    - Styling Components
+    - Components Deep Dive
+    - HTTP Requests
+    - Routing
+    - Forms & Validation
+    - Redux
+    - Authentication
+    - Testing Introduction
+    - Deployment
+    - Bonus (Animations, next steps, nextJS, Webpack)
+
+
+- let & const
+    - use let & const instead of var
+    - reuse of const value throws error
+
+- arrow function
+    - normal
+      function myFnc(){...     }
+    - arrow
+      const myFnc = (args) => {....}
+
+     - eliminates many of the problems with using "this"
+     - clarifys by replacing this
+     - can ommit (args) if only one argument is to be used (ie const myfnc = name =>{} )
+     - can ommit (args) if no argument is to be used (ie const myfnc = () =>{} )
+
+     - can use return function for 1+ statements
+     - for only 1 statement we can use
+==============================================================================================
+
+Export and import modules
+
+- allows import & export of diff modules / components
+
+ex:
+
+const person = {
+    name : 'Foo',
+    age : 23
+}
+
+.. other file
+
+export default person;
+
+import {person} from './exportTest.js'
+console.log(person);
+
+- if you use default you can change var name on input, otherwise it needs to be the same
+- can use alias on import, ie (import { joe as joeseph } from ./utility.js)
+
+
+
+==============================================================================================
+Spread and Rest Operators
+
+Spread
+const newArray = [...oldArray,1,2]   // pulls old array values and adds 1,2
+const newObject = [...oldObject,newProp:5]  // copies oldObject and adds new field newProp intialized to 5
+
+Rest
+used to merge a list of function argruments into an array
+
+function sortArgs(... args) {
+     return args.sort();
+}

@@ -1,0 +1,37 @@
+SPA - Single Page App
+MPA - Multi Page App
+
+To Create a React APP
+sudo install create-react-app -g
+create-react-app xxxxxx-xxx-xx
+
+Success! Created react-complete-guide at /home/tj/project_workspaces/udemy-react-16-complete-guide-coursework/react-complete-guide
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd react-complete-guide
+  npm start
+
+ JSX Restrictions
+
+ =====================================
+ Notes on states
+ - used only in components/containers and should be only used by few components as necessary in an application, updates
+   entire DOM
+ - use functions based "components" as often as possible, this only requires a portion of the DOM to be updated
+
+** Common Pattern: You can pass events such as clicks to the parent component from a child component
